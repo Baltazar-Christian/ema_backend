@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Simple landing page</title>
+    <title>www.event.co.tz</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -61,17 +61,17 @@
     </header>
     <div class="banner">
         <div class="container">
-            <h1 class="font-weight-semibold">Search engine optimisation &<br>Marketing.</h1>
+            <h3 class="font-weight-semibold">Events planning &<br>Management.</h3>
             <h6 class="font-weight-normal text-muted pb-3">Simple is a simple template with a creative design that
                 solves all your marketing and SEO queries.</h6>
             <div>
-                <button class="btn btn-opacity-light mr-1">Get started</button>
-                <button class="btn btn-opacity-success ml-1">Learn more</button>
+                
+                <a href="{{ route('register') }}" class="btn btn-opacity-dark text-warning btn-lg mr-1"> Create an Account</a>
             </div>
             <img src="images/Group171.svg" alt="" class="img-fluid">
         </div>
     </div>
-    <div class="content-wrapper">
+    <div class="content-wrapper bg-dark text-warning">
         <div class="container">
             <section class="features-overview" id="features-section">
                 <div class="content-header">
@@ -83,7 +83,7 @@
                     <div class="grid-margin d-flex justify-content-start">
                         <div class="features-width">
                             <img src="images/Group12.svg" alt="" class="img-icons">
-                            <h5 class="py-3">Speed<br>Optimisation</h5>
+                            <h5 class="py-3">Venues & Catering</h5>
                             <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
                                 consectetuer turpis, suspendisse.</p>
                             <a href="#">
@@ -94,7 +94,7 @@
                     <div class="grid-margin d-flex justify-content-center">
                         <div class="features-width">
                             <img src="images/Group7.svg" alt="" class="img-icons">
-                            <h5 class="py-3">SEO and<br>Backlinks</h5>
+                            <h5 class="py-3"> Transport<br>Backlinks</h5>
                             <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
                                 consectetuer turpis, suspendisse.</p>
                             <a href="#">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </section>
-            <section class="digital-marketing-service" id="digital-marketing-section">
+            {{-- <section class="digital-marketing-service" id="digital-marketing-section">
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
                         <h3 class="m-0">We Offer a Full Range<br>of Digital Marketing Services!</h3>
@@ -145,8 +145,8 @@
                         <button class="btn btn-info">Readmore</button>
                     </div>
                 </div>
-            </section>
-            <section class="case-studies" id="case-studies-section">
+            </section> --}}
+            {{-- <section class="case-studies" id="case-studies-section">
                 <div class="row grid-margin">
                     <div class="col-12 text-center pb-5">
                         <h2>Our case studies</h2>
@@ -239,7 +239,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
             <section class="customer-feedback" id="feedback-section">
                 <div class="row">
                     <div class="col-12 text-center pb-5">
@@ -432,10 +432,10 @@
             <!-- Modal for Contact - us Button -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-dialog-centered " role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Contact Us</h4>
+                            <h6 class="modal-title" id="exampleModalLabel">Sign In To Your Account</h6>
                         </div>
                         <div class="modal-body">
 
@@ -445,7 +445,7 @@
                                     <label for="Email">Email</label>
                                     <input id="email" type="email"
                                     class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" id="Email" required autocomplete="email" autofocus>
+                                    value="{{ old('email') }}" id="Email" required autocomplete="email"placeholder="Enter Your Email"  autofocus>
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -469,8 +469,10 @@
                            
                         </div>
                         <div class="modal-footer">
+                           
+                            <button  type="submit"  class="btn btn-dark text-warning">Sign in </button>
+                            
                             <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success">Submit</button>
                         </div>
                     </form>
                     </div>
